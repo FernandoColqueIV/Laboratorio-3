@@ -1,0 +1,138 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #634d25d7;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/*------------------panaderia-principal------------------ */
+/*----------------foto Logotipo principal---------------- */
+.panaderia-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	/*Genera un gradiente para "difuminar" con un color la imaguen del logotipo principal*/
+	background: linear-gradient(rgb(51, 34, 34) 0%, rgba(0,0,0,.50) 100%), url(../Imagenes/backdrop.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+.panaderia-Catalogo {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	/*Genera un gradiente para "difuminar" con un color la imaguen del logotipo principal*/
+	background: linear-gradient(rgb(51, 34, 34) 0%, rgba(0,0,0,.50) 100%), url(../Imagenes/CatalgoFotoPortada.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+.panaderia-Ingredientes {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	/*Genera un gradiente para "difuminar" con un color la imaguen del logotipo principal*/
+	background: linear-gradient(rgb(51, 34, 34) 0%, rgba(0,0,0,.50) 100%), url(../Imagenes/IngredientesFotoPortada.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+
+/*Ordenar posicion del texto "panaderia-principal"*/
+.panaderia-Ingredientes .contenedor,
+.panaderia-Catalogo .contenedor,
+.panaderia-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 7em;/*Ord posicion Vertical*/
+}
+/*Texto: Panaderia BBB en el logo*/
+.panaderia-Ingredientes .titulo,
+.panaderia-Catalogo .titulo,
+.panaderia-principal .titulo {
+	font-weight: 700;/*grosor del texto*/
+	font-size: 3em;/*Tamaño del texto*/
+	margin-bottom: 0.4em;/*posicion del texto*/
+}
+.panaderia-Ingredientes .descripcion,
+.panaderia-Catalogo .descripcion,
+.panaderia-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 75%;
+	margin-bottom: 1.25em;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+/*----------------margen de la cabecera-------------*/
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+	.panaderia-Ingredientes,
+	.panaderia-Catalogo,
+	.panaderia-principal {
+		font-size: 14px;
+	}
+	.panaderia-Ingredientes .descripcion,
+	.panaderia-Catalogo .descripcion,
+	.panaderia-principal .descripcion {
+		max-width: 100%;
+	}
+}
+
+/*---------------------------------*/
